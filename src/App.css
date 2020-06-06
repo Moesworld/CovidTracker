@@ -1,16 +1,6 @@
 .App {
   text-align: center;
 }
-body {
-  background-color: aliceblue;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
 
 
 .App-logo {
