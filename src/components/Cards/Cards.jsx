@@ -3,11 +3,11 @@ import {Card, CardContent, Typography, Grid} from '@material-ui/core';
 import CountUp from 'react-countup';
 import cx from 'classnames';
 import styles from './Cards.module.css';
-const Cards = ( {data:{confirmed , recovered, deaths, lastUpdate}} )=> {
+
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     if (!confirmed) {
         return 'Loading...';
-      }
-    
+    }
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -42,7 +42,7 @@ const Cards = ( {data:{confirmed , recovered, deaths, lastUpdate}} )=> {
                 </Grid>
             </Grid>
         </div>
-    )
-}
+    );
+};
 
 export default Cards;

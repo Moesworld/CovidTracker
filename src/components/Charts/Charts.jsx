@@ -7,8 +7,10 @@ const Charts = ({data : {confirmed, deaths, recovered}, country}) => {
     const [dailyData, setDailyData] = useState([]);
     useEffect(()=>{
         const fetchAPI = async () => {
-            setDailyData(await fetchDailyData());
-        }
+            const initialDailyData = await fetchDailyData();
+      
+            setDailyData(initialDailyData);
+          };
         
         fetchAPI();
     }, []);
@@ -38,7 +40,7 @@ const Charts = ({data : {confirmed, deaths, recovered}, country}) => {
     
 
     const lineChart = (
-        dailyData.length
+        dailyData[0] 
             ? (
                 <Line 
                     data={{
@@ -64,7 +66,7 @@ const Charts = ({data : {confirmed, deaths, recovered}, country}) => {
             
             {country ? barChart : lineChart}
         </div>
-    )
-}
+    );
+};
 
 export default Charts;
