@@ -2,7 +2,6 @@
 import React from 'react';
 import logo, { ReactComponent } from './logo.svg';
 import './App.css';
-
 import { Cards, Charts, CountryPicker} from './components';
 import styles from './App.module.css';
 import { fetchData } from './api';
